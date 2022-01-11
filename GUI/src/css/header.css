@@ -1,0 +1,10 @@
+#login-dropdown > div > div {
+  background-color: transparent !important;
+  border: transparent !important;
+}
+
+#dropdown-x > div > div {
+  position: fixed !important;
+  top: inherit;
+  left: inherit;
+}

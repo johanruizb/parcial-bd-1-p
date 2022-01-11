@@ -1,0 +1,33 @@
+* {
+  user-select: none;
+}
+
+/* LIGHT */
+.theme-base {
+  background-color: #fafafa !important;
+}
+
+.theme-enfasis {
+  background-color: #ccc !important;
+  color: #000 !important;
+}
+
+.theme-enfasis .card-link,
+.theme-base .card-link {
+  color: #000 !important;
+}
+
+/* DARK */
+.theme-base-dark {
+  background-color: #14161a !important;
+}
+
+.theme-enfasis-dark {
+  background-color: #343a40 !important;
+  color: #fff !important;
+}
+
+.theme-enfasis-dark .card-link,
+.theme-base-dark .card-link {
+  color: #fff !important;
+}

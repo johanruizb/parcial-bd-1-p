@@ -1,0 +1,18 @@
+.card-container {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-direction: row;
+}
+
+.list-group-item {
+  border: 1px 0px 1px 0px solid rgba(255, 255, 255, 1);
+}
+
+.cartas {
+  margin-top: 1.5vmax;
+  width: 18rem;
+}

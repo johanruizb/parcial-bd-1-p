@@ -1,0 +1,10 @@
+#carrusel {
+  margin-top: 10vmin;
+  z-index: 0;
+}
+
+@media screen and (max-width: 800px) {
+  #carrusel img {
+    width: 180%;
+  }
+}

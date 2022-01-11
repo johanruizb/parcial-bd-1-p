@@ -1,0 +1,23 @@
+.login-user {
+  text-align: left;
+  padding: 15px;
+  position: fixed;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 1000px) {
+  .login-user {
+    position: fixed !important;
+    right: 0.1rem;
+  }
+}
+
+.login-user p {
+  color: #cd1f32;
+}
+
+.login-div a:hover {
+  color: #ccc;
+}
