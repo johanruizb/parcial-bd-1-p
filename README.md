@@ -6,6 +6,12 @@ igualmente se registran las asistencias del personal.
 El administrador puede crear un curso y agregar 
 detalles del personal, tanto estudiantes como profesores.
 
+## Diagramas
+
+Para los diagramas se uso Draw.io
+
+[```Diagramas```](https://github.com/johanruizb/parcial-bd-1-p/tree/master/Diagrams)
+
 ## Capa de datos
 Para el desarrollo e implementación de la base de 
 datos, se usó postgres, más específicamente un docker
