@@ -4,9 +4,6 @@ var router = express.Router();
 /* POST login listing. */
 
 router.post("/", function (req, respuesta) {
-
-    console.log("XD");
-
     const { Pool } = require("pg");
     const bcrypt = require("bcrypt");
 
@@ -18,7 +15,7 @@ router.post("/", function (req, respuesta) {
     });
 
     postgres.connect().catch((error) => {
-        console.log("" + error);
+        console.warn("" + error);
         respuesta.send({ code: "ERROR", error, textplain: error + "" });
         respuesta.end();
 
@@ -38,7 +35,7 @@ router.post("/", function (req, respuesta) {
 
         try {
             await postgres.query('BEGIN').catch((error) => {
-                console.log("" + error);
+                console.warn("" + error);
                 respuesta.send({ code: "ERROR", error, textplain: error + "" });
                 respuesta.end();
 
@@ -49,7 +46,7 @@ router.post("/", function (req, respuesta) {
             await postgres.query('COMMIT');
             return respuesta.send({ code: "SUCCESS" });
         } catch (e) {
-            console.log(e);
+            console.warn(e);
             return respuesta.send({ code: "FAIL" });
         } finally {
             postgres.end();

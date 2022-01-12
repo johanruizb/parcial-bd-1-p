@@ -15,7 +15,7 @@ router.post("/", function (req, res) {
   });
 
   postgres.connect().catch((error) => {
-    console.log("" + error);
+    console.warn("" + error);
     res.send({ code: "ERROR", error, textplain: error + "" });
     res.end();
 
@@ -35,11 +35,9 @@ router.post("/", function (req, res) {
 
   postgres.query(text, values, (err, result) => {
     if (err) {
-      console.log(err.stack);
+      console.warn(err.stack);
     } else {
       const user = result.rows[0];
-
-      //console.log(user.contraseña);
 
       bcrypt.compare(password, user.contraseña, function (err, isValid) {
         if (err) return res.send({ code: "ERROR", err, textplain: err + "" });
@@ -63,8 +61,6 @@ router.post("/", function (req, res) {
           postgres.query(consulta, valor, (err, res1) => {
             if (err)
               return;
-            //console.log(res1.rows);
-            //resultado = res1.rows;
             return res.send({
               code: "SUCCESS",
               rol: user.rol.toUpperCase(),
@@ -74,9 +70,6 @@ router.post("/", function (req, res) {
             });
           });
         }
-
-        //        console.log(user.rol.toUpperCase());
-        // console.log(resultado);
       });
     }
   });

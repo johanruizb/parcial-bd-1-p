@@ -25,16 +25,16 @@ CREATE TABLE IF NOT EXISTS Asistencia (
     FOREIGN KEY (codigo_estudiante) REFERENCES Estudiantes(codigo_estudiante) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS Profesores (
-    serial_profesores serial,
-    codigo_profesor VARCHAR(100) NOT NULL UNIQUE,
+CREATE TABLE IF NOT EXISTS Personal (
+    serial_personal serial,
+    codigo_personal VARCHAR(100) NOT NULL UNIQUE,
     nombre VARCHAR(100) NOT NULL,
     apellido VARCHAR(100) NOT NULL,
     salario int NOT NULL,
     direccion VARCHAR(100) NOT NULL,
     EPS VARCHAR(100),
     ARL VARCHAR(100),
-    PRIMARY KEY(codigo_profesor)
+    PRIMARY KEY(codigo_personal)
 );
 
 CREATE TABLE IF NOT EXISTS Sedes (
@@ -42,10 +42,10 @@ CREATE TABLE IF NOT EXISTS Sedes (
     sede_id VARCHAR(100) NOT NULL,
     nombre VARCHAR(100) NOT NULL,
     ubicacion VARCHAR(100) NOT NULL,
-    codigo_profesor VARCHAR(100) NOT NULL,
+    codigo_personal VARCHAR(100) NOT NULL,
     curso_id VARCHAR(10) NOT NULL,
     PRIMARY KEY(sede_id),
-    FOREIGN KEY (codigo_profesor) REFERENCES Profesores(codigo_profesor) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (codigo_personal) REFERENCES Personal(codigo_personal) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS Administradores (
